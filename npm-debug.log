@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'update',
+1 verbose cli   '-g',
+1 verbose cli   'generator-angular' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose request where is /generator-angular
+5 verbose request registry https://registry.npmjs.org/
+6 verbose request id f0d0aaf197ad5377
+7 verbose url raw /generator-angular
+8 verbose url resolving [ 'https://registry.npmjs.org/', './generator-angular' ]
+9 verbose url resolved https://registry.npmjs.org/generator-angular
+10 verbose request where is https://registry.npmjs.org/generator-angular
+11 info trying registry request attempt 1 at 14:22:46
+12 verbose etag "5GZXTOO7KCGRPTIQQ68242PJ7"
+13 http GET https://registry.npmjs.org/generator-angular
+14 http 304 https://registry.npmjs.org/generator-angular
+15 silly registry.get cb [ 304,
+15 silly registry.get   { date: 'Sat, 15 Nov 2014 13:22:47 GMT',
+15 silly registry.get     server: 'Apache',
+15 silly registry.get     via: '1.1 varnish',
+15 silly registry.get     'last-modified': 'Sat, 15 Nov 2014 13:22:47 GMT',
+15 silly registry.get     'cache-control': 'max-age=60',
+15 silly registry.get     etag: '"5GZXTOO7KCGRPTIQQ68242PJ7"',
+15 silly registry.get     age: '6',
+15 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
+15 silly registry.get     'x-cache': 'HIT',
+15 silly registry.get     'x-cache-hits': '1',
+15 silly registry.get     'x-timer': 'S1416057767.668568,VS0,VE0',
+15 silly registry.get     vary: 'Accept',
+15 silly registry.get     'content-length': '0',
+15 silly registry.get     'keep-alive': 'timeout=10, max=50',
+15 silly registry.get     connection: 'Keep-Alive' } ]
+16 verbose etag https://registry.npmjs.org/generator-angular from cache
+17 info outdated updating [ [ '/usr/local/lib',
+17 info outdated     'generator-angular',
+17 info outdated     '0.9.2',
+17 info outdated     '0.10.0',
+17 info outdated     '0.10.0',
+17 info outdated     'latest' ] ]
+18 verbose install where,what [ '/usr/local/lib', [ 'generator-angular@0.10.0' ] ]
+19 verbose cache add [ 'generator-angular@0.10.0', null ]
+20 verbose cache add name=undefined spec="generator-angular@0.10.0" args=["generator-angular@0.10.0",null]
+21 verbose parsed url { protocol: null,
+21 verbose parsed url   slashes: null,
+21 verbose parsed url   auth: null,
+21 verbose parsed url   host: null,
+21 verbose parsed url   port: null,
+21 verbose parsed url   hostname: null,
+21 verbose parsed url   hash: null,
+21 verbose parsed url   search: null,
+21 verbose parsed url   query: null,
+21 verbose parsed url   pathname: 'generator-angular@0.10.0',
+21 verbose parsed url   path: 'generator-angular@0.10.0',
+21 verbose parsed url   href: 'generator-angular@0.10.0' }
+22 verbose cache add name="generator-angular" spec="0.10.0" args=["generator-angular","0.10.0"]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: '0.10.0',
+23 verbose parsed url   path: '0.10.0',
+23 verbose parsed url   href: '0.10.0' }
+24 verbose addNamed [ 'generator-angular', '0.10.0' ]
+25 verbose addNamed [ '0.10.0', '0.10.0' ]
+26 silly lockFile 5c2f16cf-generator-angular-0-10-0 generator-angular@0.10.0
+27 verbose lock generator-angular@0.10.0 /Users/pedromadruga/.npm/5c2f16cf-generator-angular-0-10-0.lock
+28 verbose registry.get https://registry.npmjs.org/generator-angular not expired, no request
+29 silly lockFile 7cffb57c-lar-generator-angular-0-10-0-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+30 verbose lock https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz /Users/pedromadruga/.npm/7cffb57c-lar-generator-angular-0-10-0-tgz.lock
+31 verbose addRemoteTarball [ 'https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz',
+31 verbose addRemoteTarball   '5eac8abc723da386d0fe6a4e722b06948d7b7d24' ]
+32 info retry fetch attempt 1 at 14:22:48
+33 verbose fetch to= /var/folders/rk/9mghpc0j0jv45wqf1kjwf3p00000gn/T/npm-48711-1R-xPV+8/registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+34 http GET https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+35 http 200 https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+36 silly lockFile 7cffb57c-lar-generator-angular-0-10-0-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+37 silly lockFile 7cffb57c-lar-generator-angular-0-10-0-tgz https://registry.npmjs.org/generator-angular/-/generator-angular-0.10.0.tgz
+38 silly lockFile 5c2f16cf-generator-angular-0-10-0 generator-angular@0.10.0
+39 silly lockFile 5c2f16cf-generator-angular-0-10-0 generator-angular@0.10.0
+40 error Error: EACCES, mkdir '/Users/pedromadruga/.npm/generator-angular/0.10.0'
+40 error  { [Error: EACCES, mkdir '/Users/pedromadruga/.npm/generator-angular/0.10.0']
+40 error   errno: 3,
+40 error   code: 'EACCES',
+40 error   path: '/Users/pedromadruga/.npm/generator-angular/0.10.0' }
+41 error Please try running this command again as root/Administrator.
+42 error System Darwin 14.0.0
+43 error command "node" "/usr/local/bin/npm" "update" "-g" "generator-angular"
+44 error cwd /Users/pedromadruga/Development/Webdevelopment/simplate2
+45 error node -v v0.10.32
+46 error npm -v 1.4.28
+47 error path /Users/pedromadruga/.npm/generator-angular/0.10.0
+48 error code EACCES
+49 error errno 3
+50 error stack Error: EACCES, mkdir '/Users/pedromadruga/.npm/generator-angular/0.10.0'
+51 verbose exit [ 3, true ]
