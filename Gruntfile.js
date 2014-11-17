@@ -160,6 +160,7 @@ module.exports = function (grunt) {
       }
     },
 
+
     // Automatically inject Bower components into the app
     wiredep: {
       options: {
@@ -384,7 +385,7 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma'
+    'karma:unit'
   ]);
 
   grunt.registerTask('build', [
@@ -409,4 +410,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.loadNpmTasks('grunt-karma');
 };
