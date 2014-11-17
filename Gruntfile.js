@@ -119,7 +119,8 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/views/{,*/}*.js'
         ]
       },
       test: {
@@ -359,15 +360,11 @@ module.exports = function (grunt) {
     },
 
     csslint: {
-
       options: {
-        csslintrc: ".csslintrc"
-
+        csslintrc: '.csslintrc'
       },
       strict: {
-
-        src: "app/styles/*.css"
-
+        src: 'app/styles/*.css'
       }
 
 

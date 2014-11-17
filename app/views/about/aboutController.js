@@ -7,6 +7,13 @@
  * # AboutCtrl
  * Controller of the simplate2App
  */
+
+
+
+
+
+
+
 angular.module('simplate2App')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
