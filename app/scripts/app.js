@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name simplate2App
+ * @name pedromadruga.com
  * @description
- * # simplate2App
+ * # pedromadruga.com
  *
  * Main module of the application.
  */
 angular
-  .module('simplate2App', [
+  .module('pedromadrugacom', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

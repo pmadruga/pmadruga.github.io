@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('simplate2App'));
+  beforeEach(module('pedromadrugacom'));
 
   var MainCtrl,
     scope;

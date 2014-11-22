@@ -1,5 +1,5 @@
 {
-  "name": "simplate2",
+  "name": "pedromadrugacom",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
@@ -28,6 +28,8 @@
     "jshint-stylish": "^0.2.0",
     "karma": "^0.12.25",
     "karma-jasmine": "^0.2.3",
+    "protractor": "*",
+    "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-tasks": "^0.4.0",
     "time-grunt": "^0.3.1"
   },
