@@ -22,11 +22,6 @@ angular
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home', {
-        templateUrl: 'views/main/main.html',
-        url: '/',
-        controller: 'MainCtrl'
-      })
       .state('about', {
         templateUrl: 'views/about/about.html',
         url: '/about',
@@ -36,7 +31,19 @@ angular
       .state('contact', {
         templateUrl: 'views/contact/contact.html',
         url: '/contact',
-        controller: 'AboutCtrl'
+        controller: 'ContactCtrl'
+      })
+      .state('login', {
+        templateUrl: 'views/login/login.html',
+        url: '/login',
+        controller: 'LoginCtrl'
+
+      })
+      .state('post', {
+        templateUrl: 'views/post/post.html',
+        url: '/post',
+        controller: 'PostCtrl'
+
       });
       /*.otherwise({
         redirectTo: '/'
