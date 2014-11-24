@@ -22,6 +22,12 @@ angular
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
+      .state('main', {
+        templateUrl: 'views/main/main.html',
+        url: '/blog',
+        controller: 'MainCtrl'
+
+      })
       .state('about', {
         templateUrl: 'views/about/about.html',
         url: '/about',

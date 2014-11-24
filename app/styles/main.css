@@ -1,3 +1,16 @@
+/* Header */
+/** Special link **/
+#loginLink {
+  color: #999999;
+  text-decoration: none;
+
+}
+
+/* Main content */
+
+/* Footer */
+
+
 /* Space out content a bit */
 body {
   padding-top: 20px;
@@ -15,7 +28,7 @@ a {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: black;
+  background-color: #245476;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
