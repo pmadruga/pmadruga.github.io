@@ -1,11 +1,6 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name pedromadruga.com
- * @description
- * # pedromadruga.com
- *
  * Main module of the application.
  */
 angular
