@@ -165,11 +165,11 @@ module.exports = function (grunt) {
     // Automatically inject Bower components into the app
     wiredep: {
       options: {
-       // cwd: '<%= yeoman.app %>'
+        // cwd: '<%= yeoman.app %>'
       },
       app: {
         src: ['<%= yeoman.app %>/index.html'],
-        ignorePath:  /\.\.\//
+        ignorePath: /\.\.\//
       }
     },
 
@@ -210,7 +210,7 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images']
+        assetsDirs: ['<%= yeoman.dist %>', '<%= yeoman.dist %>/images']
       }
     },
 
@@ -364,6 +364,17 @@ module.exports = function (grunt) {
         singleRun: true
       }
     },
+    protractor: {
+      options: {
+        keepAlive: true,
+        configFile: 'test/protractor.conf.js',
+        args: {
+          seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar',
+          chromeDriver: 'node_modules/protractor/selenium/chromedriver'
+        }
+      },
+      run: {}
+    },
 
     csslint: {
       options: {
@@ -403,7 +414,8 @@ module.exports = function (grunt) {
     'concurrent:test',
     'autoprefixer',
     'connect:test',
-    'karma:unit'
+    'karma:unit',
+    'protractor:run'
   ]);
 
   grunt.registerTask('build', [
@@ -431,4 +443,5 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-karma');
   grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks('grunt-protractor-runner');
 };
