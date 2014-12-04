@@ -14,7 +14,7 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/blog');
 
     $stateProvider
       .state('main', {
