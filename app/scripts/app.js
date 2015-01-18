@@ -10,7 +10,8 @@ angular
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'ui.router'
+    'ui.router',
+    'firebase'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 

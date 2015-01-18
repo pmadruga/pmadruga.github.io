@@ -1,9 +1,8 @@
 /* Header */
 /** Special link **/
-#loginLink {
+#linkLogin {
   color: #999999;
   text-decoration: none;
-
 }
 
 /* Main content */
@@ -55,7 +54,7 @@ a {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  /*border-top: 1px solid #e5e5e5;*/
 }
 
 /* Customize container */
