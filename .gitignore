@@ -5,3 +5,5 @@ dist
 bower_components
 .idea/workspace.xml
 **/.idea/workspace.xml
+app/views/post/postController.js
+app/views/login/loginController.js

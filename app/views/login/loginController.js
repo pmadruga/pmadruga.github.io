@@ -9,7 +9,7 @@ angular
   .controller('LoginCtrl', function ($scope) {
     var ref = new Firebase('https://radiant-fire-4389.firebaseio.com');
 
-    $scope.login = function login(credentials) {
+    $scope.login = function(credentials) {
 
       ref.authWithPassword({
         email:credentials.username,

@@ -1,8 +1,8 @@
 <div class="jumbotron">
-  <form name="createPost" ng-submit="post(content)">
+  <form name="createPost" ng-controller="PostCtrl" ng-submit="submitPost(content)">
 
-    <input type="text" name="title" ng-model="content.title"/>
-    <textarea class="form-control" rows="5" ng-model="content.text"></textarea>
+    <input id="inputTitle" type="text" name="inputTitle" ng-model="content.title" value="test title." required/>
+    <textarea class="form-control" rows="5" ng-model="content.text" value="test text." required></textarea>
     <button class="btn btn-primary btn-block" type="submit">Post</button>
 
   </form>
