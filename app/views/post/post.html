@@ -1,9 +1,37 @@
-<div class="jumbotron">
+<div class="well">
   <form name="createPost" ng-controller="PostCtrl" ng-submit="submitPost(content)">
 
-    <input id="inputTitle" type="text" name="inputTitle" ng-model="content.title" value="test title." required/>
-    <textarea class="form-control" rows="5" ng-model="content.text" value="test text." required></textarea>
-    <button class="btn btn-primary btn-block" type="submit">Post</button>
+    <div class="form-group">
+      <!-- Post date -->
+      <h4><span class="label label-default">{{ postDate | date: 'fullDate' }}</span></h4>
+    </div>
+
+    <div class="form-group">
+      <!-- Post title -->
+      <input id="inputTitle"
+             class="form-control"
+             type="text" name="inputTitle"
+             placeholder="Title"
+             ng-model="content.title"
+             required/>
+
+    </div>
+
+    <div class="form-group">
+      <!-- Post content -->
+      <textarea class="form-control"
+                rows="5"
+                value="test text."
+                placeholder="Content"
+                ng-model="content.text"
+                required></textarea>
+
+    </div>
+
+    <!-- Button for submitting -->
+    <button class="btn btn-primary"
+            type="submit">Post
+    </button>
 
   </form>
 </div>

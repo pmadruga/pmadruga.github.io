@@ -3,6 +3,7 @@
 angular.module('pedromadrugacom')
   .controller('PostCtrl', function ($scope, $firebase) {
 
+    $scope.postDate = new Date();
 
     /**
      * Creates a new post
@@ -17,7 +18,7 @@ angular.module('pedromadrugacom')
 
         'title': content.title,
         'text': content.text,
-        'date': new Date()
+        //'date': new Date()
 
       });
 
@@ -52,7 +53,6 @@ angular.module('pedromadrugacom')
 
     $scope.alertDebug = function () {
 
-      console.log('debug');
 
     };
 
