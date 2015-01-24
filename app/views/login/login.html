@@ -1,13 +1,39 @@
-<div class="jumbotron">
+<div class="col-md-3"></div>
+
+<!-- The login area should be centered, hence size "col-md-6" -->
+<div class="col-md-6">
+<div class="panel panel-default">
+  <div class="panel-heading">Login</div>
+  <div class="panel-body">
   <form name="loginForm" ng-controller="LoginCtrl" ng-submit="login(credentials)">
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus="off"
-           ng-model="credentials.username">
 
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required autofocus="off"
-           ng-model="credentials.password">
+    <!-- Email input area -->
+    <div class="form-group">
+    <input type="email"
+           id="inputEmail"
+           class="form-control"
+           placeholder="Email address"
+           autofocus="off"
+           ng-model="credentials.username"
+           required/>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </div>
+
+    <!-- Password input area -->
+    <div class="form-group">
+    <input type="password"
+           id="inputPassword"
+           class="form-control"
+           placeholder="Password"
+           autofocus="off"
+           ng-model="credentials.password"
+           required />
+      </div>
+
+    <button class="btn btn-primary"
+            type="submit">Sign in</button>
   </form>
+  </div>
 </div>
+</div>
+<div class="col-md-3"></div>

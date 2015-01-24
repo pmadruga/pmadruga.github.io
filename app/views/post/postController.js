@@ -17,7 +17,7 @@ angular.module('pedromadrugacom')
       posts.$add({
 
         'title': content.title,
-        'text': content.text,
+        'text': content.text
         //'date': new Date()
 
       });
