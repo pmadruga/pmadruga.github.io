@@ -2,7 +2,6 @@
 
 How my website came to be.
 
----
 
 ### What is it?
 It is my own personal website, built by hand. It includes a blog, portfolio and other features.
@@ -23,13 +22,13 @@ Probably never: improvement through iteration while having fun. There will alway
 
 Then go ahead:
 
-####Installation:
+####1) Installation:
 
 `npm install`
 
 `bower install`
 
-#####Starting the server: 
+####2) Starting the server: 
 `grunt serve`
 
 
