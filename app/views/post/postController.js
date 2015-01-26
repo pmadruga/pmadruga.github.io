@@ -5,6 +5,11 @@ angular.module('pedromadrugacom')
 
     $scope.postDate = new Date();
 
+    // TODO:
+    // Include date in the post
+    // Code cleaning
+    // Add the possibility for markup
+
     /**
      * Creates a new post
      */
