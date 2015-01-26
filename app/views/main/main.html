@@ -1,4 +1,4 @@
-<div class="highlight">
-<h3>Post title <small>Secondary text</small></h3>
-  <p>This is some text.</p>
+<div class="highlight" ng-repeat="post in posts">
+<h3>{{ post.title }}</h3>
+  <p>{{ post.text }}</p>
 </div>

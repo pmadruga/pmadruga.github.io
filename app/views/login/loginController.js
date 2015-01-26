@@ -22,17 +22,16 @@ angular
       return ref.authWithPassword({
         email:credentials.username,
         password: credentials.password
-      }, function (error, authData) {
+      },
+        function (error, authData) {
         if (error) {
-          console.log("Login Failed!", error);
-
+          console.log('Login Failed!', error);
         } else {
-          console.log("Authenticated successfully with payload:", authData);
-
+          console.log('Authenticated successfully with payload:', authData);
         }
       });
 
-    }
+    };
 
 
   });

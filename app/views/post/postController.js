@@ -15,22 +15,19 @@ angular.module('pedromadrugacom')
      */
     $scope.submitPost = function(content, posts) {
 
-      var sync = $firebase(new Firebase("https://radiant-fire-4389.firebaseio.com/posts")),
+      var currentDate = new Date(),
+          sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
+
       // Contains all posts.
-        posts = sync.$asArray();
+      posts = sync.$asArray();
 
       posts.$add({
 
         'title': content.title,
-        'text': content.text
-        //'date': new Date()
+        'text': content.text,
+        'date': JSON.stringify(currentDate)
 
       });
-
-      //posts.push(post);
-      //posts.$save();
-
-      //$scope.persist(posts, sync);
 
       return posts;
 
