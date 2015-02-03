@@ -3,15 +3,13 @@
 angular.module('pedromadrugacom')
   .controller('PostCtrl', function ($scope, $firebase) {
 
-    $scope.postDate = new Date();
-
     // TODO:
     // Include date in the post
     // Code cleaning
     // Add the possibility for markup
 
     /**
-     * Creates a new post
+     * Persists a post
      */
     $scope.submitPost = function(content, posts) {
 
@@ -19,9 +17,7 @@ angular.module('pedromadrugacom')
           sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
 
       // Contains all posts.
-      posts = sync.$asArray();
-
-      posts.$add({
+      return posts = sync.$asArray().$add({
 
         'title': content.title,
         'text': content.text,
@@ -29,34 +25,8 @@ angular.module('pedromadrugacom')
 
       });
 
-      return posts;
-
     };
 
-    /**
-     * Get existing posts
-     */
-    $scope.getPosts = function () {
-
-    };
-
-    /**
-     * Persist in firebase
-     */
-    $scope.persist = function (posts, sync) {
-
-
-      // create a synchronized array for use in our HTML code
-      posts = sync.$asArray();
-      posts.$save();
-
-
-    };
-
-    $scope.alertDebug = function () {
-
-
-    };
 
 
   });
