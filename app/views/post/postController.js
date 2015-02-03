@@ -21,7 +21,7 @@ angular.module('pedromadrugacom')
 
         'title': content.title,
         'text': content.text,
-        'date': JSON.stringify(currentDate)
+        'date': Firebase.ServerValue.TIMESTAMP
 
       });
 

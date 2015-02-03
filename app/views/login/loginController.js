@@ -1,9 +1,5 @@
 'use strict';
 
-/**
- * Created by pedromadruga on 23/11/14.
- */
-
 angular
   .module('pedromadrugacom')
   .controller('LoginController', function ($scope) {
