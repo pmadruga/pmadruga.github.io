@@ -21,30 +21,30 @@ angular
       .state('main', {
         templateUrl: 'views/main/main.html',
         url: '/blog',
-        controller: 'MainCtrl'
+        controller: 'MainController'
 
       })
       .state('about', {
         templateUrl: 'views/about/about.html',
         url: '/about',
-        controller: 'AboutCtrl'
+        controller: 'AboutController'
 
       })
       .state('contact', {
         templateUrl: 'views/contact/contact.html',
         url: '/contact',
-        controller: 'ContactCtrl'
+        controller: 'ContactController'
       })
       .state('login', {
         templateUrl: 'views/login/login.html',
         url: '/login',
-        controller: 'LoginCtrl'
+        controller: 'LoginController'
 
       })
       .state('post', {
         templateUrl: 'views/post/post.html',
         url: '/post',
-        controller: 'PostCtrl'
+        controller: 'PostController'
 
       });
       /*.otherwise({

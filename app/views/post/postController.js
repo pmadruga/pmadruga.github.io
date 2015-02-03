@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('pedromadrugacom')
-  .controller('PostCtrl', function ($scope, $firebase) {
+  .controller('PostController', function ($scope, $firebase) {
 
     // TODO:
     // Include date in the post

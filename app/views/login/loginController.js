@@ -6,7 +6,7 @@
 
 angular
   .module('pedromadrugacom')
-  .controller('LoginCtrl', function ($scope) {
+  .controller('LoginController', function ($scope) {
     var ref = new Firebase('https://radiant-fire-4389.firebaseio.com');
 
     // TODO:

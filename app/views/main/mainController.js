@@ -8,7 +8,7 @@
  * Controller of the simplate2App
  */
 angular.module('pedromadrugacom')
-  .controller('MainCtrl', function ($scope, $firebase) {
+  .controller('MainController', function ($scope, $firebase) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

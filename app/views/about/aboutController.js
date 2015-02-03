@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('pedromadrugacom')
-  .controller('AboutCtrl', function ($scope) {
+  .controller('ContactController', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
