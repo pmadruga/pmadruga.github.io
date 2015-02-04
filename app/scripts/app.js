@@ -47,7 +47,5 @@ angular
         controller: 'PostController'
 
       });
-      /*.otherwise({
-        redirectTo: '/'
-      });*/
+
   });
