@@ -3,14 +3,18 @@
 angular.module('pedromadrugacom')
   .controller('PostController', function ($scope, $firebase, firebaseConnection) {
 
+    // Estabilishes firebase connection via main service
     var ref = firebaseConnection;
 
-    // No alerts being displayed
+    // Clearing any existing alerts
     $scope.alerts = [];
 
 
     /**
-     * Persists a post
+     * Persists a post in firebase.
+     * @param content
+     * @param posts
+     * @returns {*}
      */
     $scope.submitPost = function(content, posts) {
 
@@ -18,10 +22,11 @@ angular.module('pedromadrugacom')
       if (ref.getAuth() && ref.getAuth !== null) {
 
         var currentDate = new Date(),
+
             // Syncs with the array of posts
             sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
 
-        // Adds the posts
+        // Adds the posts with a closure
         return posts = sync.$asArray().$add({
 
           'title': content.title,
@@ -49,17 +54,26 @@ angular.module('pedromadrugacom')
 
     };
 
+    /**
+     * Removes alert upon clicking on closing button
+     * @param index
+     */
     $scope.closeAlert = function(index) {
+
       $scope.alerts.splice(index, 1);
 
     };
 
+    /**
+     * Resets the form when successfully post
+     */
     $scope.resetForm = function(){
 
-
+        // Clears input fields
         var reset = { inputTitle: '', inputContent: '' };
-        $scope.content = angular.copy(reset);
 
+        //Copies cleared input fields
+        $scope.content = angular.copy(reset);
 
     }
 

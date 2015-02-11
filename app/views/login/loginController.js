@@ -2,14 +2,13 @@
 
 angular
   .module('pedromadrugacom')
-  .controller('LoginController', function ($scope, firebaseConnection) {
+  .controller('LoginController', function ($scope, firebaseConnection, $location) {
 
     // Calling the service that provides connection to firebase, defined in main module (app.js)
     var ref = firebaseConnection;
 
-    // TODO:
-    // should only show login if not logged in already.
-    // should show a success and error message
+    // Resetting alerts
+    $scope.authAlerts = [];
 
 
     /**
@@ -22,14 +21,21 @@ angular
         email:credentials.username,
         password: credentials.password
       },
-        function (error, authData) {
+        function (error) {
+
+
         if (error) {
-          console.log('Login Failed!', error);
+
           // Show error message
+          console.log(error.message);
+          $scope.authAlerts.push({ type: 'danger', msg: 'Wrong credentials, buddy'});
+
+
+
         } else {
-          console.log('Authenticated successfully with payload:', authData);
-          // Should show a success message
-          // And then redirect to the home page
+
+          // If successful login, redirect to the home page
+          $location.path('post');
         }
       });
 
