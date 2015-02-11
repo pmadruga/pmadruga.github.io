@@ -415,7 +415,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'connect:test',
     'karma:unit',
-    'protractor:run'
+    'protractor'
   ]);
 
   grunt.registerTask('build', [

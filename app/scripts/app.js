@@ -11,23 +11,24 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'firebase'
+    'firebase',
+    'ui.bootstrap'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/blog');
+    $urlRouterProvider.otherwise('/about');
 
     $stateProvider
       .state('main', {
-        templateUrl: 'views/main/main.html',
-        url: '/blog',
-        controller: 'MainController'
-
-      })
-      .state('about', {
         templateUrl: 'views/about/about.html',
         url: '/about',
         controller: 'AboutController'
+
+      })
+      .state('blog', {
+        templateUrl: 'views/blog/blog.html',
+        url: '/blog',
+        controller: 'BlogController'
 
       })
       .state('contact', {
@@ -48,4 +49,15 @@ angular
 
       });
 
+  })
+
+/**
+ * Instantianting firebase and making it accessible to all controllers
+ */
+  .factory('firebaseConnection', function() {
+
+   return new Firebase('https://radiant-fire-4389.firebaseio.com');
+
+
   });
+

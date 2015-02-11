@@ -1,5 +1,8 @@
 <div class="well">
+
   <form name="createPost" ng-controller="PostController" ng-submit="submitPost(content)">
+
+    <alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="closeAlert($index)">{{ alert.msg }}</alert>
 
     <div class="form-group">
       <!-- Post date -->
@@ -10,7 +13,8 @@
       <!-- Post title -->
       <input id="inputTitle"
              class="form-control"
-             type="text" name="inputTitle"
+             type="text"
+             name="inputTitle"
              placeholder="Title"
              ng-model="content.title"
              required/>
@@ -21,9 +25,9 @@
       <!-- Post content -->
       <textarea class="form-control"
                 rows="5"
-                value="test text."
                 placeholder="Content"
                 ng-model="content.text"
+                name="inputContent"
                 required></textarea>
 
     </div>
