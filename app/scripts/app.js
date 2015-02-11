@@ -19,7 +19,7 @@ angular
     $urlRouterProvider.otherwise('/about');
 
     $stateProvider
-      .state('main', {
+      .state('about', {
         templateUrl: 'views/about/about.html',
         url: '/about',
         controller: 'AboutController'
