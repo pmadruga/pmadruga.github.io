@@ -9,7 +9,6 @@ angular.module('pedromadrugacom')
     // Clearing any existing alerts
     $scope.alerts = [];
 
-
     /**
      * Persists a post in firebase.
      * @param content
@@ -40,7 +39,6 @@ angular.module('pedromadrugacom')
 
           // Let's reset the form
           $scope.resetForm();
-
 
         });
 
@@ -75,7 +73,7 @@ angular.module('pedromadrugacom')
         //Copies cleared input fields
         $scope.content = angular.copy(reset);
 
-    }
+    };
 
 
   });

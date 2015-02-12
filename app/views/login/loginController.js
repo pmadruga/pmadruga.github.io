@@ -10,12 +10,13 @@ angular
     // Resetting alerts
     $scope.authAlerts = [];
 
-
     /**
      * Authentication with firebase
       * @param credentials
      */
     $scope.login = function(credentials) {
+
+      ref.unauth();
 
       return ref.authWithPassword({
         email:credentials.username,
@@ -23,13 +24,11 @@ angular
       },
         function (error) {
 
-
         if (error) {
 
+          console.log(error);
           // Show error message
-          console.log(error.message);
-          $scope.authAlerts.push({ type: 'danger', msg: 'Wrong credentials, buddy'});
-
+          $scope.authAlerts.push({ type: 'danger', msg: error});
 
 
         } else {

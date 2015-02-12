@@ -370,7 +370,7 @@ module.exports = function (grunt) {
         configFile: 'test/protractor.conf.js',
         args: {
           seleniumServerJar: 'node_modules/protractor/selenium/selenium-server-standalone-2.44.0.jar',
-          chromeDriver: 'node_modules/protractor/selenium/chromedriver'
+          chromeDriver: 'node_modules/protractor/selenium/chromedriver_2.13.zip'
         }
       },
       run: {}

@@ -28,5 +28,9 @@ describe('Main page', function () {
     expect(browser.get('/#/contact'));
   });
 
+  it('should check ng-bind-html', function() {
+    expect(element(by.binding('post.text')).getText()).not.toBe(null)
+  });
+
 });
 

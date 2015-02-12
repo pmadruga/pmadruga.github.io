@@ -5,5 +5,6 @@
 <h3>{{ post.title }}
   <small>{{ post.date | date: 'MMM d, y' }}</small>
 </h3>
-  <p>{{ post.text }}</p>
+  <!-- Enabling HTML formatting -->
+  <p ng-bind-html="post.text"></p>
 </div>

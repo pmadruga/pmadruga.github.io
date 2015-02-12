@@ -10,11 +10,8 @@ angular.module('pedromadrugacom')
       'Karma'
     ];
 
-
     var sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
 
     $scope.posts = sync.$asArray();
-
-
 
   });
