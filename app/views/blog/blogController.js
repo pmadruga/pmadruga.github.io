@@ -3,15 +3,10 @@
 angular.module('pedromadrugacom')
   .controller('BlogController', function ($scope, $firebase) {
 
-    //Test template
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
+    /* Fetches all existing posts. Notice the "posts" in the end of the url */
     var sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
 
+    /* Binding */
     $scope.posts = sync.$asArray();
 
   });

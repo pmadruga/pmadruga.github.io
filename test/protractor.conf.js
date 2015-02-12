@@ -4,12 +4,13 @@ exports.config = {
   colors: true,
   maxSessions: 1,
   multiCapabilities: [
-    {
+    /* Restricting tests to one browser for now, to save time */
+    /*{
     browserName: 'chrome'
-    },
-    {
+    }*/
+    /*{
       browserName: 'firefox'
-    },
+    },*/
     {
       browserName: 'safari'
     }

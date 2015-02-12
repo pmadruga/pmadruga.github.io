@@ -8,7 +8,7 @@ module.exports = function(config) {
 
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
-    autoWatch: true,
+    autoWatch: false,
 
     // base path, that will be used to resolve files and exclude
     basePath: '../',
@@ -27,6 +27,9 @@ module.exports = function(config) {
       'bower_components/angular-sanitize/angular-sanitize.js',
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/firebase/firebase.js',
+      'bower_components/angularfire/dist/angularfire.js',
+      'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/scripts/**/*.js',
       'app/views/**/*.js',
       'test/spec/**/*.js'
@@ -36,7 +39,7 @@ module.exports = function(config) {
     exclude: [],
 
     // web server port
-    port: 8080,
+    port: 1337,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -48,15 +51,15 @@ module.exports = function(config) {
     // - IE (only Windows)
     browsers: [
       'PhantomJS',
-      'Firefox'
+      /*'Firefox'*/
     ],
 
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-chrome-launcher',
+      /*'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-phantomjs-launcher',
+      'karma-phantomjs-launcher',*/
       'karma-jasmine'
     ],
 
