@@ -38,6 +38,18 @@ a {
   padding-right: 15px;
 }
 
+.footer p{
+
+  margin: 10px;
+}
+
+.footer a{
+  color: #fff;
+  padding-left: 10%;
+  padding-right: 10%;
+
+}
+
 /* Custom page header */
 .header {
   border: none;
