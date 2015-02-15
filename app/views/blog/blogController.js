@@ -9,4 +9,9 @@ angular.module('pedromadrugacom')
     /* Binding */
     $scope.posts = sync.$asArray();
 
+    $scope.posts.$loaded().then(function() {
+      angular.element('#loader').hide();
+    });
+
+
   });
