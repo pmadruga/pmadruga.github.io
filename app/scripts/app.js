@@ -31,10 +31,10 @@ angular
         controller: 'BlogController'
 
       })
-      .state('contact', {
-        templateUrl: 'views/contact/contact.html',
-        url: '/contact',
-        controller: 'ContactController'
+      .state('portfolio', {
+        templateUrl: 'views/work/work.html',
+        url: '/work',
+        controller: 'WorkController'
       })
       .state('login', {
         templateUrl: 'views/login/login.html',

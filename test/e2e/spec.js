@@ -11,10 +11,10 @@ describe('Blog page', function () {
     expect(browser.get('/#/blog'));
   });
 
-  it('should go to "About" page upon contact button click', function () {
+  it('should go to "Work" page upon contact button click', function () {
     element(by.id('expandMenuButton')).click();
-    element(by.id('linkAbout')).click();
-    expect(browser.get('/#/about'));
+    element(by.id('linkWork')).click();
+    expect(browser.get('/#/work'));
   });
 
   it('should go to "Contact" page upon contact button click', function () {
