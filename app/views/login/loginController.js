@@ -16,6 +16,7 @@ angular
      */
     $scope.login = function(credentials) {
 
+      // Remove any existing auths
       ref.unauth();
 
       return ref.authWithPassword({
@@ -26,7 +27,6 @@ angular
 
         if (error) {
 
-          console.log(error);
           // Show error message
           $scope.authAlerts.push({ type: 'danger', msg: error});
 
