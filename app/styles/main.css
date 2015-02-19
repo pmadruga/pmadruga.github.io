@@ -31,11 +31,12 @@ body {
   padding-bottom: 100px;
   background-color: #F8F8FF;
   font-family: Arimo;
+  text-align: justify;
 }
 
 a {
-  /*color: #245476;*/
-  color:#2454D7;
+  color: #245476;
+  /*color:#2454D7;*/
 }
 
 .navbar-default, .navbar-default .navbar-toggle{
