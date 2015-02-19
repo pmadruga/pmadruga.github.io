@@ -34,7 +34,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/global/{,*/}*.js'],
         tasks: ['newer:jshint:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -119,7 +119,7 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/global/{,*/}*.js',
           '<%= yeoman.app %>/views/{,*/}*.js'
         ]
       },
@@ -161,11 +161,10 @@ module.exports = function (grunt) {
       }
     },
 
-
     // Automatically inject Bower components into the app
     wiredep: {
       options: {
-        // cwd: '<%= yeoman.app %>'
+        cwd: ''
       },
       app: {
         src: ['<%= yeoman.app %>/index.html'],
@@ -177,7 +176,7 @@ module.exports = function (grunt) {
     filerev: {
       dist: {
         src: [
-          '<%= yeoman.dist %>/scripts/{,*/}*.js',
+          '<%= yeoman.dist %>/global/{,*/}*.js',
           '<%= yeoman.dist %>/views/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
           '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
@@ -277,7 +276,7 @@ module.exports = function (grunt) {
           src: [
             '*.html',
             'views/{,*/}*.html',
-            'common/{,*/}*.html'
+            'global/views/common/{,*/}*.html'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -318,7 +317,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'common/{,*/}*.html',
+            'global/views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
           ]
@@ -332,7 +331,13 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
-        }]
+        },
+          {
+            expand: true,
+            cwd: 'bower_components/font-awesome',
+            src: 'fonts/*.*',
+            dest: '<%= yeoman.dist %>'
+          }]
       },
       styles: {
         expand: true,

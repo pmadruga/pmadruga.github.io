@@ -19,7 +19,7 @@
 </head>
 
 <body class="container">
-<header class="header" ng-include='"common/header/header.html"'></header>
+<header class="header" ng-include='"global/views/header/header.html"'></header>
 
 <main>
   <div class="col-md-12">
@@ -27,7 +27,7 @@
   </div>
 </main>
 
-<footer class="footer" ng-include='"common/footer/footer.html"'></footer>
+<footer class="footer" ng-include='"global/views/footer/footer.html"'></footer>
 
 <!-- Dependencies. TODO: Include in separate file -->
 <section id="dependencies">
@@ -58,15 +58,14 @@
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <script src="bower_components/less/dist/less.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
-  <script src="bower_components/angularfire/dist/angularfire.js"></script>
-  <script src="bower_components/firebase/firebase.js"></script>
-
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/app.js"></script>
+  <script src="global/app.js"></script>
   <script src="views/blog/blogController.js"></script>
   <script src="views/about/aboutController.js"></script>
   <script src="views/work/workController.js"></script>
