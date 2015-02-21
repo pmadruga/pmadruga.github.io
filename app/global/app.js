@@ -14,7 +14,7 @@ angular
     'firebase',
     'ui.bootstrap'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
     $urlRouterProvider.otherwise('/about');
 
@@ -48,6 +48,9 @@ angular
         controller: 'PostController'
 
       });
+
+    // Removes hashbang (IE10+)
+    $locationProvider.html5Mode(true);
 
   })
 
