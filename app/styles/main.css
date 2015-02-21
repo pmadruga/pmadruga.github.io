@@ -15,6 +15,11 @@
 
 }
 
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+  background-color: none;
+
+}
+
 /* Main content */
 .img-thumbnail{
   margin-right: 35px;
@@ -22,7 +27,7 @@
 }
 
 .thumbnail {
-  border: none;
+  border: 1px solid #ddd;
   background-color: transparent;
 
 
@@ -40,12 +45,24 @@ body {
   padding-bottom: 100px;
   background-color: #F8F8FF;
   font-family: Arimo;
+  font-size: 17px;
   /*text-align: justify;*/
+
+}
+
+.row {
+  margin-top: 50px;
 }
 
 a {
   color: #245476;
   /*color:#2454D7;*/
+}
+
+p {
+
+  margin: 20px 10px 0 0;
+
 }
 
 .navbar-default, .navbar-default .navbar-toggle{
@@ -79,8 +96,7 @@ a {
 
 .footer a{
   color: #fff;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding:8%;
 
 }
 
