@@ -68,6 +68,7 @@ p {
 .navbar-default, .navbar-default .navbar-toggle{
   background: none;
   border: none;
+  margin-top: 5px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -97,6 +98,12 @@ p {
 .footer a{
   color: #fff;
   padding:8%;
+
+
+}
+
+.footer a:hover{
+  text-decoration:none;
 
 }
 
