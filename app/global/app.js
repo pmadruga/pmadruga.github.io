@@ -16,12 +16,12 @@ angular
   ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $urlRouterProvider.otherwise('/about');
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('about', {
         templateUrl: 'views/about/about.html',
-        url: '/about',
+        url: '/',
         controller: 'AboutController'
 
       })
