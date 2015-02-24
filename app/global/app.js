@@ -50,7 +50,7 @@ angular
       });
 
     // Removes hashbang (IE10+)
-    $locationProvider.html5Mode(true);
+    //$locationProvider.html5Mode(true);
 
   })
 
