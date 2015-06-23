@@ -5,11 +5,8 @@ import firebaseConnection from '../../../app/common/services';
 
 
 class BlogController {
-
   constructor() {
-
     this.loadBlogPosts();
-
   }
 
   /**

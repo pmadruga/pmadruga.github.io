@@ -1,3 +1,5 @@
+import firebaseConnection from '../../../app/common/services';
+
 class LoginController {
   constructor() {
 

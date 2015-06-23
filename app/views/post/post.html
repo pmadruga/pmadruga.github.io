@@ -1,8 +1,10 @@
 <div class="well">
 
-  <form name="createPost" ng-controller="PostController" ng-submit="submitPost(content)">
+  <form name="createPost" ng-controller="PostController as vm" ng-submit="submitPost(content)">
 
+<!--
     <alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="closeAlert($index)">{{ alert.msg }}</alert>
+-->
 
     <div class="form-group">
       <!-- Post date -->

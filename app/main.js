@@ -5,6 +5,7 @@ import uibootstrap from 'angular-bootstrap';
 
 import { BlogController } from './views/blog/blogController';
 import { LoginController } from './views/login/loginController';
+import { PostController } from './views/post/postController';
 
 import { firebaseConnection } from './common/services';
 
@@ -55,13 +56,17 @@ angular
   })
 
   .controller('BlogController', BlogController)
+  .controller('LoginController', LoginController)
+  .controller('PostController', PostController)
+
+  .service('firebaseConnection', firebaseConnection);
 
 /**
  * Instantianting firebase and making it accessible to all controllers
  */
-  .factory('firebaseConnection', function() {
+  /*.factory('firebaseConnection', function() {
 
    return new Firebase('https://radiant-fire-4389.firebaseio.com');
 
-  });
+  });*/
 
