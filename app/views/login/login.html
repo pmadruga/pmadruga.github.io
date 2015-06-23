@@ -1,14 +1,14 @@
 <div class="col-md-3"></div>
 
 <!-- The login area should be centered, hence size "col-md-6" -->
-<div class="col-md-6" ng-controller="LoginController">
+<div class="col-md-6" ng-controller="LoginController as vm">
   <div class="panel panel-default">
     <div class="panel-heading">Login</div>
     <div class="panel-body">
 
       <form name="loginForm" ng-submit="login(credentials)">
 
-        <alert ng-repeat="alerts in authAlerts" type="{{ alerts.type }}">{{ alerts.msg }}</alert>
+        <!-- <alert ng-repeat="alerts in authAlerts" type="{{ alerts.type }}">{{ alerts.msg }}</alert> -->
 
         <!-- Email input area -->
         <div class="form-group">

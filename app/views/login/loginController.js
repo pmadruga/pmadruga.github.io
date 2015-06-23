@@ -1,44 +1,80 @@
-'use strict';
+class LoginController {
+  constructor() {
 
-angular
-  .module('pedromadrugacom')
-  .controller('LoginController', function ($scope, firebaseConnection, $location) {
+    this.auth();
+  }
 
-    // Calling the service that provides connection to firebase, defined in main module (app.js)
+  auth(){
+
     var ref = firebaseConnection;
+    this.login = function (credentials) {
 
-    // Resetting alerts
-    $scope.authAlerts = [];
-
-    /**
-     * Authentication with firebase
-      * @param credentials
-     */
-    $scope.login = function(credentials) {
-
-      // Remove any existing auths
       ref.unauth();
 
       return ref.authWithPassword({
-        email:credentials.username,
+
+        email: credentials.username,
         password: credentials.password
-      },
-        function (error) {
+
+
+      }, function (error) {
 
         if (error) {
-
-          // Show error message
-          $scope.authAlerts.push({ type: 'danger', msg: error});
-
-
+          this.authAlerts.push({type: 'danger', msg: error});
         } else {
-
-          // If successful login, redirect to the home page
           $location.path('post');
+
         }
+
       });
+    }
 
-    };
+  }
+}
+
+export { LoginController }
+
+/*
+ angular
+ .module('pedromadrugacom')
+ .controller('LoginController', function ($scope, firebaseConnection, $location) {
+
+ // Calling the service that provides connection to firebase, defined in main module (app.js)
+ var ref = firebaseConnection;
+
+ // Resetting alerts
+ $scope.authAlerts = [];
+
+ /!**
+ * Authentication with firebase
+ * @param credentials
+ *!/
+ $scope.login = function(credentials) {
+
+ // Remove any existing auths
+ ref.unauth();
+
+ return ref.authWithPassword({
+ email:credentials.username,
+ password: credentials.password
+ },
+ function (error) {
+
+ if (error) {
+
+ // Show error message
+ $scope.authAlerts.push({ type: 'danger', msg: error});
 
 
-  });
+ } else {
+
+ // If successful login, redirect to the home page
+ $location.path('post');
+ }
+ });
+
+ };
+
+
+ });
+ */

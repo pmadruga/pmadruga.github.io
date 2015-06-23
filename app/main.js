@@ -4,6 +4,8 @@ import firebase from 'angularfire';
 import uibootstrap from 'angular-bootstrap';
 
 import { BlogController } from './views/blog/blogController';
+import { LoginController } from './views/login/loginController';
+
 import { firebaseConnection } from './common/services';
 
 /**
