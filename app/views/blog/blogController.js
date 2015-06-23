@@ -1,23 +1,33 @@
+'use strict';
+
+import $firebase from 'angularfire';
+import firebaseConnection from '../../../app/common/services';
+
+
 class BlogController {
 
   constructor() {
 
-    alert('hi!');
+    this.loadBlogPosts();
 
-    this.hello = "greetings";
+  }
 
-    let sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
+  /**
+   * Syncs with firebase to retrieve all the blog posts
+   */
+  loadBlogPosts() {
+
+    var sync = $firebase(new Firebase('https://radiant-fire-4389.firebaseio.com/posts'));
 
     this.posts = sync.$asArray();
 
+    // Hides the spinner icon once all data has been loaded
     this.posts.$loaded().then(function () {
       angular.element('#loader').hide();
     });
 
   }
-
 }
-
 
 export { BlogController }
 

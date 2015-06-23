@@ -4,6 +4,7 @@ import firebase from 'angularfire';
 import uibootstrap from 'angular-bootstrap';
 
 import { BlogController } from './views/blog/blogController';
+import { firebaseConnection } from './common/services';
 
 /**
  * Main module of the application.
@@ -14,7 +15,7 @@ angular
     'firebase',
     'ui.bootstrap'
   ])
-  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
 
