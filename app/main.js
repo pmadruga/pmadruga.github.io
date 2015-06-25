@@ -1,7 +1,10 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
-import firebase from 'angularfire';
+
+import firebase from 'firebase';
+import $firebase from 'angularfire';
 import uibootstrap from 'angular-bootstrap';
+import angularsanitize from 'angular-sanitize';
 
 import { BlogController } from './views/blog/blogController';
 import { LoginController } from './views/login/loginController';
@@ -16,8 +19,11 @@ angular
   .module('pedromadrugacom', [
     'ui.router',
     'firebase',
-    'ui.bootstrap'
+    'ui.bootstrap',
+        'ngSanitize'
   ])
+
+    // Routing
   .config(function ($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise('/');
@@ -51,8 +57,7 @@ angular
         url: '/post',
         controllerAs: 'PostController'
 
-      });
-
+      })
   })
 
   .controller('BlogController', BlogController)
@@ -60,13 +65,4 @@ angular
   .controller('PostController', PostController)
 
   .service('firebaseConnection', firebaseConnection);
-
-/**
- * Instantianting firebase and making it accessible to all controllers
- */
-  /*.factory('firebaseConnection', function() {
-
-   return new Firebase('https://radiant-fire-4389.firebaseio.com');
-
-  });*/
 

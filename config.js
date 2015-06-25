@@ -17,6 +17,7 @@ System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.1",
     "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.0",
+    "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.1",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "angularfire": "github:firebase/angularfire@1.1.1",
     "babel": "npm:babel-core@5.5.8",
@@ -25,6 +26,9 @@ System.config({
     "core-js": "npm:core-js@0.9.18",
     "firebase": "github:firebase/firebase-bower@2.2.7",
     "github:angular-ui/ui-router@0.2.15": {
+      "angular": "github:angular/bower-angular@1.4.1"
+    },
+    "github:angular/bower-angular-sanitize@1.4.1": {
       "angular": "github:angular/bower-angular@1.4.1"
     },
     "github:jspm/nodelibs-process@0.1.1": {
