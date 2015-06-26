@@ -1,11 +1,9 @@
 <div ng-controller="BlogController as vm">
 
-  <!-- <div class="row text-center" id="loader"><i class="fa fa-cog fa-spin fa-2x"></i></div> -->
+  <div class="row text-center" id="loader" ng-show="vm.showSpinner"><i class="fa fa-cog fa-spin fa-2x"></i></div>
 
   <!-- Iterating in the posts array, showing the most recent post on top of the list -->
   <div class="highlight" ng-repeat="post in vm.posts | orderBy:'date':true">
-
-
 
     <!-- Post content -->
     <h3>{{ post.title }}

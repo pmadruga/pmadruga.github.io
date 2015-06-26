@@ -1,18 +1,20 @@
 'use strict';
 
-
-
 class BlogController {
   constructor($firebaseObject) {
 
-      var sync = new Firebase('https://radiant-fire-4389.firebaseio.com');
+      this.showSpinner = true;
+
+      let sync = new Firebase('https://radiant-fire-4389.firebaseio.com');
 
       this.posts = $firebaseObject(sync.child('posts'));
 
       // Hides the spinner icon once all data has been loaded
-      /*this.posts.$loaded().then(function () {
-          angular.element('#loader').hide();
-      });*/
+      this.posts.$loaded().then(function (){
+
+          this.showSpinner = false;
+
+      }.bind(this));
   }
 }
 
