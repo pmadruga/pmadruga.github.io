@@ -1,82 +1,40 @@
 import firebaseConnection from '../../../app/common/services';
 
 class LoginController {
-  constructor() {
 
-    this.auth();
-  }
-
-  auth(){
-
-    var ref = firebaseConnection;
-    this.login = function (credentials) {
-
-      ref.unauth();
-
-      return ref.authWithPassword({
-
-        email: credentials.username,
-        password: credentials.password
-
-
-      }, function (error) {
-
-        if (error) {
-          this.authAlerts.push({type: 'danger', msg: error});
-        } else {
-          $location.path('post');
-
-        }
-
-      });
+    constructor(firebaseConnection) {
+        var ref = firebaseConnection;
+        this.auth(ref);
     }
 
-  }
+    /**
+     * Authentication
+     * @param ref
+     */
+    auth(ref) {
+
+        this.login = function (credentials) {
+
+            // Killing any existing sessions
+            ref.unauth();
+
+            return ref.authWithPassword({
+                email: credentials.username,
+                password: credentials.password
+
+            }, function (error) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    window.location.assign('/app/#/post');
+                }
+            });
+        }
+    }
 }
+
+LoginController.$inject = ['firebaseConnection'];
 
 export { LoginController }
 
-/*
- angular
- .module('pedromadrugacom')
- .controller('LoginController', function ($scope, firebaseConnection, $location) {
 
- // Calling the service that provides connection to firebase, defined in main module (app.js)
- var ref = firebaseConnection;
-
- // Resetting alerts
- $scope.authAlerts = [];
-
- /!**
- * Authentication with firebase
- * @param credentials
- *!/
- $scope.login = function(credentials) {
-
- // Remove any existing auths
- ref.unauth();
-
- return ref.authWithPassword({
- email:credentials.username,
- password: credentials.password
- },
- function (error) {
-
- if (error) {
-
- // Show error message
- $scope.authAlerts.push({ type: 'danger', msg: error});
-
-
- } else {
-
- // If successful login, redirect to the home page
- $location.path('post');
- }
- });
-
- };
-
-
- });
- */

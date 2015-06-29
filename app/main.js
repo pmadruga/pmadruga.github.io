@@ -16,53 +16,53 @@ import { firebaseConnection } from './common/services';
  * Main module of the application.
  */
 angular
-  .module('pedromadrugacom', [
-    'ui.router',
-    'firebase',
-    'ui.bootstrap',
+    .module('pedromadrugacom', [
+        'ui.router',
+        'firebase',
+        'ui.bootstrap',
         'ngSanitize'
-  ])
+    ])
 
     // Routing
-  .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
 
-    $stateProvider
-      .state('about', {
-        templateUrl: 'views/about/about.html',
-        url: '/',
-        controllerAs: 'AboutController'
+        $stateProvider
+            .state('about', {
+                templateUrl: 'views/about/about.html',
+                url: '/',
+                controllerAs: 'AboutController'
 
-      })
-      .state('blog', {
-        templateUrl: 'views/blog/blog.html',
-        url: '/blog',
-        controllerAs: 'BlogController'
+            })
+            .state('blog', {
+                templateUrl: 'views/blog/blog.html',
+                url: '/blog',
+                controllerAs: 'BlogController'
 
-      })
-      .state('portfolio', {
-        templateUrl: 'views/work/work.html',
-        url: '/work',
-        controllerAs: 'WorkController'
-      })
-      .state('login', {
-        templateUrl: 'views/login/login.html',
-        url: '/login',
-        controllerAs: 'LoginController'
+            })
+            .state('portfolio', {
+                templateUrl: 'views/work/work.html',
+                url: '/work',
+                controllerAs: 'WorkController'
+            })
+            .state('login', {
+                templateUrl: 'views/login/login.html',
+                url: '/login',
+                controllerAs: 'LoginController'
 
-      })
-      .state('post', {
-        templateUrl: 'views/post/post.html',
-        url: '/post',
-        controllerAs: 'PostController'
+            })
+            .state('post', {
+                templateUrl: 'views/post/post.html',
+                url: '/post',
+                controllerAs: 'PostController'
 
-      })
-  })
+            })
+    })
 
-  .controller('BlogController', BlogController)
-  .controller('LoginController', LoginController)
-  .controller('PostController', PostController)
+    .controller('BlogController', BlogController)
+    .controller('LoginController', LoginController)
+    .controller('PostController', PostController)
 
-  .service('firebaseConnection', firebaseConnection);
+    .service('firebaseConnection', firebaseConnection);
 
