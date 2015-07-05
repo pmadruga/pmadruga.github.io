@@ -60,9 +60,11 @@ angular
             })
     })
 
+    // Controllers
     .controller('BlogController', BlogController)
     .controller('LoginController', LoginController)
     .controller('PostController', PostController)
 
+    // Services
     .service('firebaseConnection', firebaseConnection);
 

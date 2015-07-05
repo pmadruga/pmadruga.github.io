@@ -1,26 +1,27 @@
 'use strict';
 
 class PostController {
-
     constructor() {
-
         this.postDate = new Date();
 
     }
 
-    getContent(content) {
+    /**
+     * Submits content and sync with firebase.
+     * Callback needs improvement.
+     *
+     * @param content
+     * @param $firebaseArray
+     * @param firebaseConnection
+     * @returns {*}
+     */
+    submitContent(content, $firebaseArray){
 
-        this.submitContent(content);
-
-    }
-
-    submitContent(content, $firebaseArray, firebaseConnection){
-
-        var ref = firebaseConnection;
+        var ref = new Firebase('https://radiant-fire-4389.firebaseio.com');
         
-        console.log(firebaseConnection);
-
-        if (ref.getAuth() && ref.getAuth !== null) {
+        console.log(ref);
+        console.log(ref.getAuth();
+        if (ref !== undefined && ref.getAuth() && ref.getAuth !== null) {
 
             return $firebaseArray(ref.child('posts')).$add({
 
@@ -28,19 +29,33 @@ class PostController {
                 'text': content.text,
                 'date': Firebase.ServerValue.TIMESTAMP
 
-            }).then(function () {
+            }).then(function (content) {
 
                 // Success msg display
                 console.log('Success at posting');
 
                 // Let's reset the form
-                //$scope.resetForm();
+                this.resetForm(content);
 
-            });
+            }.bind(this));
 
+        } else{
+            
+            console.log('Some error occured. You are probably offline.');
         }
+    }
+
+    /**
+     * Clears the form by clearing the model after submitting the post.
+     * @param content
+     */
+    resetForm(content) {
+
+        content.text = '';
+        content.title = '';
 
     }
+
 }
 
 PostController.$inject = ['$firebaseArray','firebaseConnection'];
