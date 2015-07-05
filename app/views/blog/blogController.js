@@ -1,13 +1,10 @@
 'use strict';
 
 class BlogController {
-  constructor($firebaseObject) {
-
-      const sync = new Firebase('https://radiant-fire-4389.firebaseio.com');
+  constructor($firebaseArray, firebaseConnection) {
 
       this.showSpinner = true;
-
-      this.posts = $firebaseObject(sync.child('posts'));
+      this.posts = $firebaseArray(firebaseConnection.child('posts'));
 
       // Hides the spinner icon once all data has been loaded
       this.posts.$loaded().then(function (){
@@ -18,7 +15,7 @@ class BlogController {
   }
 }
 
-BlogController.$inject = ['$firebaseObject'];
+BlogController.$inject = ['$firebaseArray', 'firebaseConnection'];
 
 export { BlogController }
 

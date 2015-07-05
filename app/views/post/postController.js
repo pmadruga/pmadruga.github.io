@@ -9,7 +9,6 @@ class PostController {
 
     }
     
-    
 
     /**
      * Submits content and sync with firebase.

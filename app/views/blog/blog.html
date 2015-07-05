@@ -1,17 +1,18 @@
 <div ng-controller="BlogController as vm">
 
-  <div class="row text-center" id="loader" ng-show="vm.showSpinner"><i class="fa fa-cog fa-spin fa-2x"></i></div>
+    <div class="row text-center" id="loader" ng-show="vm.showSpinner"><i class="fa fa-cog fa-spin fa-2x"></i></div>
 
-  <!-- Iterating in the posts array, showing the most recent post on top of the list -->
-  <div class="highlight" ng-repeat="post in vm.posts | orderBy:'date':true">
+    <!-- Iterating in the posts array, showing the most recent post on top of the list -->
+    <div class="highlight" ng-repeat="post in vm.posts | orderBy: 'date' : true">
 
-    <!-- Post content -->
-    <h3>{{ post.title }}
-      <small>{{ post.date | date: 'MMM d, y' }}</small>
-    </h3>
-    <!-- Enabling HTML formatting -->
-    <p ng-bind-html="post.text"></p>
+        <!-- Post content -->
+        <h3>{{ post.title }}
+            <small>{{ post.date | date: 'MMM d, y' }}</small>
+        </h3>
 
-    <div class="divider"></div>
-  </div>
+        <p ng-bind-html="post.text"></p>
+        <!-- End of post content -->
+
+        <div class="divider"></div>
+    </div>
 </div>
