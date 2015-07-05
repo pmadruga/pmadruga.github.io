@@ -3,9 +3,9 @@
 class BlogController {
   constructor($firebaseObject) {
 
-      this.showSpinner = true;
+      const sync = new Firebase('https://radiant-fire-4389.firebaseio.com');
 
-      let sync = new Firebase('https://radiant-fire-4389.firebaseio.com');
+      this.showSpinner = true;
 
       this.posts = $firebaseObject(sync.child('posts'));
 
