@@ -1,4 +1,4 @@
-import firebaseConnection from '../../../app/common/services';
+"use strict";
 
 class LoginController {
 
@@ -26,15 +26,13 @@ class LoginController {
                 if (error) {
                     console.log(error);
                 } else {
-                    window.location.assign('/app/#/post');
+                    window.location.assign("/app/#/post");
                 }
             });
-        }
+        };
     }
 }
 
-LoginController.$inject = ['firebaseConnection'];
+LoginController.$inject = ["firebaseConnection"];
 
-export { LoginController }
-
-
+export { LoginController };

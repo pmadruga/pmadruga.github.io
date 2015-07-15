@@ -1,70 +1,72 @@
-import angular from 'angular';
-import uirouter from 'angular-ui-router';
+"use strict";
 
-import firebase from 'firebase';
-import $firebase from 'angularfire';
-import uibootstrap from 'angular-bootstrap';
-import angularsanitize from 'angular-sanitize';
+import angular from "angular";
+import uirouter from "angular-ui-router";
 
-import { BlogController } from './views/blog/blogController';
-import { LoginController } from './views/login/loginController';
-import { PostController } from './views/post/postController';
+//import firebase from "firebase";
+import $firebase from "angularfire";
+import uibootstrap from "angular-bootstrap";
+import angularsanitize from "angular-sanitize";
 
-import { firebaseConnection } from './common/services';
+import { BlogController } from "./views/blog/blogController";
+import { LoginController } from "./views/login/loginController";
+import { PostController } from "./views/post/postController";
+
+import { firebaseConnection } from "./common/services";
 
 /**
  * Main module of the application.
  */
 angular
-    .module('pedromadrugacom', [
-        'ui.router',
-        'firebase',
-        'ui.bootstrap',
-        'ngSanitize'
+    .module("pedromadrugacom", [
+        "ui.router",
+        "firebase",
+        "ui.bootstrap",
+        "ngSanitize"
     ])
 
     // Routing
     .config(function ($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state('about', {
-                templateUrl: 'views/about/about.html',
-                url: '/',
-                controllerAs: 'AboutController'
+            .state("about", {
+                templateUrl: "views/about/about.html",
+                url: "/",
+                controllerAs: "AboutController"
 
             })
-            .state('blog', {
-                templateUrl: 'views/blog/blog.html',
-                url: '/blog',
-                controllerAs: 'BlogController'
+            .state("blog", {
+                templateUrl: "views/blog/blog.html",
+                url: "/blog",
+                controllerAs: "BlogController"
 
             })
-            .state('portfolio', {
-                templateUrl: 'views/work/work.html',
-                url: '/work',
-                controllerAs: 'WorkController'
+            .state("portfolio", {
+                templateUrl: "views/work/work.html",
+                url: "/work",
+                controllerAs: "WorkController"
             })
-            .state('login', {
-                templateUrl: 'views/login/login.html',
-                url: '/login',
-                controllerAs: 'LoginController'
+            .state("login", {
+                templateUrl: "views/login/login.html",
+                url: "/login",
+                controllerAs: "LoginController"
 
             })
-            .state('post', {
-                templateUrl: 'views/post/post.html',
-                url: '/post',
-                controllerAs: 'PostController'
+            .state("post", {
+                templateUrl: "views/post/post.html",
+                url: "/post",
+                controllerAs: "PostController"
 
-            })
+            });
     })
 
     // Controllers
-    .controller('BlogController', BlogController)
-    .controller('LoginController', LoginController)
-    .controller('PostController', PostController)
+    .controller("BlogController", BlogController)
+    .controller("LoginController", LoginController)
+    .controller("PostController", PostController)
 
     // Services
-    .service('firebaseConnection', firebaseConnection);
+    .service("firebaseConnection", firebaseConnection);
 

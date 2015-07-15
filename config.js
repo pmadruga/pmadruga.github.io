@@ -14,6 +14,68 @@ System.config({
 });
 
 System.config({
+  "depCache": {
+    "github:angular-ui/ui-router@0.2.15/angular-ui-router": [
+      "github:angular/bower-angular@1.4.1"
+    ],
+    "github:angular/bower-angular-sanitize@1.4.1/angular-sanitize": [
+      "github:angular/bower-angular@1.4.1"
+    ],
+    "app/common/services": [
+      "npm:babel-runtime@5.5.8/helpers/class-call-check"
+    ],
+    "app/views/post/postController": [
+      "npm:babel-runtime@5.5.8/helpers/create-class",
+      "npm:babel-runtime@5.5.8/helpers/class-call-check"
+    ],
+    "github:angular/bower-angular@1.4.1": [
+      "github:angular/bower-angular@1.4.1/angular"
+    ],
+    "github:angular-ui/ui-router@0.2.15": [
+      "github:angular-ui/ui-router@0.2.15/angular-ui-router"
+    ],
+    "github:components/jquery@2.1.4": [
+      "github:components/jquery@2.1.4/jquery"
+    ],
+    "github:firebase/firebase-bower@2.2.7": [
+      "github:firebase/firebase-bower@2.2.7/firebase"
+    ],
+    "github:firebase/angularfire@1.1.2/index": [
+      "github:firebase/angularfire@1.1.2/dist/angularfire"
+    ],
+    "github:angular-ui/bootstrap-bower@0.13.0": [
+      "github:angular-ui/bootstrap-bower@0.13.0/ui-bootstrap-tpls"
+    ],
+    "github:angular/bower-angular-sanitize@1.4.1": [
+      "github:angular/bower-angular-sanitize@1.4.1/angular-sanitize"
+    ],
+    "app/views/blog/blogController": [
+      "npm:babel-runtime@5.5.8/helpers/class-call-check"
+    ],
+    "npm:core-js@0.9.18/library/modules/$": [
+      "npm:core-js@0.9.18/library/modules/$.fw"
+    ],
+    "github:firebase/angularfire@1.1.2": [
+      "github:firebase/angularfire@1.1.2/index"
+    ],
+    "npm:core-js@0.9.18/library/fn/object/define-property": [
+      "npm:core-js@0.9.18/library/modules/$"
+    ],
+    "npm:babel-runtime@5.5.8/core-js/object/define-property": [
+      "npm:core-js@0.9.18/library/fn/object/define-property"
+    ],
+    "npm:babel-runtime@5.5.8/helpers/create-class": [
+      "npm:babel-runtime@5.5.8/core-js/object/define-property"
+    ],
+    "app/views/login/loginController": [
+      "npm:babel-runtime@5.5.8/helpers/create-class",
+      "npm:babel-runtime@5.5.8/helpers/class-call-check",
+      "app/common/services"
+    ]
+  }
+});
+
+System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.1",
     "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.0",

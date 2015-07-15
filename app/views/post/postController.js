@@ -1,14 +1,13 @@
-'use strict';
+"use strict";
 
 class PostController {
     constructor(firebaseConnection) {
 
-        this.ref = firebaseConnection.child('posts');
+        this.ref = firebaseConnection.child("posts");
 
         this.postDate = new Date();
 
     }
-    
 
     /**
      * Submits content and sync with firebase.
@@ -25,26 +24,26 @@ class PostController {
 
             return this.ref.push({
 
-                'title': content.title,
-                'text': content.text,
-                'date': Firebase.ServerValue.TIMESTAMP
+                "title": content.title,
+                "text": content.text,
+                "date": Firebase.ServerValue.TIMESTAMP
 
             }, function () {
 
                 // Success msg display
-                console.log('Success at posting');
+                console.log("Success at posting");
 
 
-            }.bind(this));
+            });
 
         } else {
 
-            console.log('Some error occured.');
+            console.log("Some error occured.");
         }
     }
 
 }
 
-PostController.$inject = ['firebaseConnection'];
+PostController.$inject = ["firebaseConnection"];
 
-export { PostController }
+export { PostController };
