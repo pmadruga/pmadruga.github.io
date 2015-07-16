@@ -1,12 +1,17 @@
 "use strict";
 
 import angular from "angular";
-import uirouter from "angular-ui-router";
+import "angular-ui-router";
 
-import Firebase from "firebase";
+import firebase from "firebase";
 import $firebase from "angularfire";
-import uibootstrap from "angular-bootstrap";
-import angularsanitize from "angular-sanitize";
+
+import "bootstrap";
+import "bootstrap/css/bootstrap.css!";
+import "./styles/main.css!";
+
+import "angular-bootstrap";
+import "angular-sanitize";
 
 import { BlogController } from "./views/blog/blogController";
 import { LoginController } from "./views/login/loginController";
@@ -69,7 +74,6 @@ angular
 
     // Services
     .service("firebaseConnection", firebaseConnection);
-
 
 angular.element(document).ready(function () {
     angular.bootstrap(document, ["pedromadrugacom"]);
