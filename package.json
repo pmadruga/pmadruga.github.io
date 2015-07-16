@@ -35,8 +35,11 @@
       "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.1",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
       "angularfire": "github:firebase/angularfire@^1.1.1",
-      "babel": "npm:babel-core@^5.5.8",
+      "babel": "npm:babel-core@^5.5.13",
+      "babel-core": "npm:babel-core@^5.7.2",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "clean-css": "npm:clean-css@^3.3.6",
+      "css": "github:systemjs/plugin-css@^0.1.13",
       "firebase": "github:firebase/firebase-bower@^2.2.7"
     },
     "devDependencies": {

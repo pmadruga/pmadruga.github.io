@@ -3,7 +3,7 @@
 import angular from "angular";
 import uirouter from "angular-ui-router";
 
-//import firebase from "firebase";
+import Firebase from "firebase";
 import $firebase from "angularfire";
 import uibootstrap from "angular-bootstrap";
 import angularsanitize from "angular-sanitize";
@@ -69,4 +69,9 @@ angular
 
     // Services
     .service("firebaseConnection", firebaseConnection);
+
+
+angular.element(document).ready(function () {
+    angular.bootstrap(document, ["pedromadrugacom"]);
+});
 
