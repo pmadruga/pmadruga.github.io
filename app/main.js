@@ -7,7 +7,7 @@ import firebase from "firebase";
 import $firebase from "angularfire";
 
 import "bootstrap";
-import "bootstrap/css/bootstrap.css!";
+import "bootstrap/css/bootstrap.min.css!";
 import "./styles/main.css!";
 
 import "angular-bootstrap";
@@ -37,30 +37,30 @@ angular
 
         $stateProvider
             .state("about", {
-                templateUrl: "views/about/about.html",
+                templateUrl: "./views/about/about.html",
                 url: "/",
                 controllerAs: "AboutController"
 
             })
             .state("blog", {
-                templateUrl: "views/blog/blog.html",
+                templateUrl: "./views/blog/blog.html",
                 url: "/blog",
                 controllerAs: "BlogController"
 
             })
             .state("portfolio", {
-                templateUrl: "views/work/work.html",
+                templateUrl: "./views/work/work.html",
                 url: "/work",
                 controllerAs: "WorkController"
             })
             .state("login", {
-                templateUrl: "views/login/login.html",
+                templateUrl: "./views/login/login.html",
                 url: "/login",
                 controllerAs: "LoginController"
 
             })
             .state("post", {
-                templateUrl: "views/post/post.html",
+                templateUrl: "./views/post/post.html",
                 url: "/post",
                 controllerAs: "PostController"
 

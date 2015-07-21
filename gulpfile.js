@@ -1,34 +1,58 @@
 var gulp = require('gulp'),
-    builder = require('systemjs-builder'),
+    runSequence = require('run-sequence'),
     eslint = require('gulp-eslint'),
     rimraf = require('gulp-rimraf'),
-    minifyHTML = require('gulp-minify-html');
+    builder = require('systemjs-builder'),
+    minifyHTML = require('gulp-minify-html'),
+    imagemin = require('gulp-imagemin'),
+    minifyCss = require('gulp-minify-css'),
+    shell = require('gulp-shell'),
+    pngquant = require('imagemin-pngquant');
 
-gulp.task('build-js', function() {
-});
 
-gulp.task('clean', function() {
-    return gulp.src('./dist/**/*.js', { read: false }) // much faster
-        .pipe(rimraf());
-});
-
-gulp.task('eslint', function(){
+gulp.task('eslint', function () {
 
     return gulp.src(['./app/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format());
 });
 
-gulp.task('minify-html', function() {
-    var opts = {
-        conditionals: true,
-        spare:true
-    };
-
-    return gulp.src('./app/**/*.html')
-        .pipe(minifyHTML(opts))
-        .pipe(gulp.dest('./dist/'));
+gulp.task('clean', function () {
+    return gulp
+        .src('./dist/*', {read: false})
+        .pipe(rimraf());
 });
 
-gulp.task('serve', ['connect']);
-gulp.task('build', ['clean','build-js', 'minify-html']);
+gulp.task('minify-image', function () {
+    return gulp.src('app/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/images'));
+});
+
+gulp.task('minify-css', function() {
+    return gulp.src('app/styles/*.css')
+        .pipe(minifyCss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist/styles'));
+});
+
+gulp.task('minify-html', function () {
+
+    return gulp.src('./app/**/*.html')
+        .pipe(minifyHTML())
+        .pipe(gulp.dest('./dist/'));
+
+});
+
+gulp.task('build-js', shell.task([
+    'jspm bundle app/main dist/main.js'
+]));
+
+gulp.task('build-production', function(){
+
+    runSequence("eslint", "clean", "minify-image", "minify-css", "minify-html", "build-js");
+
+});
