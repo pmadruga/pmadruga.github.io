@@ -48,7 +48,7 @@ gulp.task('minify-html', function () {
 });
 
 gulp.task('build-js', shell.task([
-    'jspm bundle app/main dist/main.js'
+    'jspm bundle-sfx app/main dist/main.js'
 ]));
 
 gulp.task('build-production', function(){
