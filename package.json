@@ -1,6 +1,6 @@
 {
   "name": "pedromadrugacom",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^3.1.23",
@@ -29,7 +29,9 @@
     "node": ">=0.10.0"
   },
   "jspm": {
-    "directories": {},
+    "directories": {
+      "packages": "lib"
+    },
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.4.1",
       "angular-bootstrap": "github:angular-ui/bootstrap-bower@^0.13.0",
