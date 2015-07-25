@@ -1,6 +1,6 @@
 {
   "name": "pedromadrugacom",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^3.1.23",
@@ -27,19 +27,18 @@
       "packages": "lib"
     },
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.4.1",
-      "angular-bootstrap": "github:angular-ui/bootstrap-bower@^0.13.0",
-      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.1",
+      "angular": "github:angular/bower-angular@^1.4.3",
+      "angular-bootstrap": "github:angular-ui/bootstrap-bower@^0.13.1",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.3",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
-      "angularfire": "github:firebase/angularfire@^1.1.1",
-      "babel": "npm:babel-core@^5.5.8",
+      "angularfire": "github:firebase/angularfire@^1.1.2",
       "bootstrap": "github:twbs/bootstrap@^3.3.5",
       "clean-css": "npm:clean-css@^3.3.6",
       "css": "github:systemjs/plugin-css@^0.1.13",
       "firebase": "github:firebase/firebase-bower@^2.2.7"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.5.13",
+      "babel": "npm:babel-core@^5.8.5",
       "babel-runtime": "npm:babel-runtime@^5.1.13",
       "core-js": "npm:core-js@^0.9.4"
     }

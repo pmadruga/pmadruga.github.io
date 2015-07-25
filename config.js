@@ -16,12 +16,12 @@ System.config({
 System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.3",
-    "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.0",
+    "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.1",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.3",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "angularfire": "github:firebase/angularfire@1.1.2",
-    "babel": "npm:babel-core@5.8.3",
-    "babel-runtime": "npm:babel-runtime@5.8.3",
+    "babel": "npm:babel-core@5.8.5",
+    "babel-runtime": "npm:babel-runtime@5.8.5",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "clean-css": "npm:clean-css@3.3.6",
     "core-js": "npm:core-js@0.9.18",
@@ -83,7 +83,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.8.3": {
+    "npm:babel-runtime@5.8.5": {
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:buffer@3.3.1": {
