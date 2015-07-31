@@ -4,7 +4,6 @@ class PostController {
     constructor(firebaseConnection) {
 
         this.ref = firebaseConnection.child("posts");
-
         this.postDate = new Date();
 
     }

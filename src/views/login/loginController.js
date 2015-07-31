@@ -13,7 +13,7 @@ class LoginController {
      */
     auth(ref) {
 
-        this.login = function (credentials) {
+        this.login = (credentials) => {
 
             // Killing any existing sessions
             ref.unauth();

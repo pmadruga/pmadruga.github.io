@@ -1,130 +1,110 @@
-<div class="row">
-<div class="col-sm-6 col-md-6">
-  <div class="thumbnail">
-    <a href="https://itunes.apple.com/se/app/nordea-swish-foretag/id887394108?mt=8" target="_blank">
-      <img src="../../../assets/images/mobileapp1.png" class="img-rounded" target="_blank">
-    </a>
+<div ng-controller="WorkController as vm">
+    <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="vm.openModal('swish')">
+                <img src="../../../assets/images/mobileapp1.png" class="img-rounded" target="_blank">
 
-    <div class="caption">
-      <h3 class="media-heading">Nordea Swish
-        <p>
-          <small>Mobile development (iOS&Android)</small>
-      </h3>
-      </p>
-      <p>An hybrid app - built for business as the end client - built with Phonegap and frameworks such as Backbone,
-        Ratchet and NodeJS. The <a href="https://itunes.apple.com/se/app/nordea-swish-foretag/id887394108?mt=8">iOS
-          version</a> can be downloaded here and <a
-          href="https://play.google.com/store/apps/details?id=com.nordea.swishcorp.se&hl=en">the Android one here</a>.
-        Built as a project in Unwire.</p>
+                <div class="caption">
+                    <h3 class="media-heading">Nordea Swish
+                        <p>
+                            <small>Mobile development (iOS&Android)</small>
+                    </h3>
+                    </p>
+                    <p>An hybrid app - built for business as the end client - built with Phonegap and frameworks such as
+                        Backbone,
+                        Ratchet and NodeJS. The <a
+                                href="https://itunes.apple.com/se/app/nordea-swish-foretag/id887394108?mt=8">iOS
+                            version</a> can be downloaded here and <a
+                                href="https://play.google.com/store/apps/details?id=com.nordea.swishcorp.se&hl=en">the
+                            Android one here</a>.
+                        Built as a project in Unwire.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="vm.openModal('pmcom')">
+                    <img src="../../../assets/images/pmcom.png">
+
+                <div class="caption">
+                    <h3 class="media-heading">pedro madruga .com
+                        <p>
+                            <small>Webdevelopment</small>
+                    </h3>
+                    </p>
+                    <p>This current website that you're accessing now. Built from scratch with AngularJS and Firebase.
+                        One of my
+                        most exciting and rewarding projects and the code can be accessed <a
+                                href="https://github.com/pmadruga/pedromadruga.com">here</a>.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="vm.openModal('simplate')">
+
+                    <img src="../../../assets/images/simplate.png">
+
+
+                <div class="caption">
+                    <h3 class="media-heading">Simplate - AngularJS boilerplate
+                        <p>
+                            <small>Webdevelopment</small>
+                    </h3>
+                    </p>
+                    <p> A scaffolding tool based on Yeoman to get new projects up and running in a blink of an eye. Code
+                        can be seen
+                        <a href="https://github.com/pmadruga/simplate">here</a>.</p>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="vm.openModal('godialog')">
+
+                    <img src="../../../assets/images/godialog.png">
+
+
+                <div class="caption">
+                    <h3 class="media-heading">Godialog platform
+                        <p>
+                            <small>Webdevelopment</small>
+                    </h3>
+                    </p>
+                    <p> A CompetenceHouse's private product, with a renewed frontend and design. The platform helps
+                        acessing and
+                        reaching employees and employers goals.</p>
+
+                </div>
+            </div>
+        </div>
 
     </div>
-  </div>
-</div>
 
-<div class="col-sm-6 col-md-6">
-  <div class="thumbnail">
-    <a href="../../../assets/images/pmcom.png" target="_blank">
-    <img src="../../../assets/images/pmcom.png">
-      </a>
+    <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="vm.openModal('cphize')">
+                    <img src="../../../assets/images/cphize.png">
+                <div class="caption">
+                    <h3 class="media-heading">Copenhagenize Design Co.
+                        <p>
+                            <small>Webdevelopment / web design</small>
+                    </h3>
+                    </p>
+                    <p> A wordpress website, with a simplistic and minimalistic UI, currently offline.</p>
 
-    <div class="caption">
-      <h3 class="media-heading">pedro madruga .com
-        <p>
-          <small>Webdevelopment</small>
-      </h3>
-      </p>
-      <p>This current website that you're accessing now. Built from scratch with AngularJS and Firebase. One of my
-        most exciting and rewarding projects and the code can be accessed <a
-          href="https://github.com/pmadruga/pedromadruga.com">here</a>.</p>
-
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-</div>
 
-<div class="row">
-
-<div class="col-sm-6 col-md-6">
-  <div class="thumbnail">
-    <a href="../../../assets/images/simplate.png" target="_blank">
-    <img src="../../../assets/images/simplate.png">
-    </a>
-
-    <div class="caption">
-      <h3 class="media-heading">Simplate - AngularJS boilerplate
-        <p>
-          <small>Webdevelopment</small>
-      </h3>
-      </p>
-      <p> A scaffolding tool based on Yeoman to get new projects up and running in a blink of an eye. Code can be seen
-        <a href="https://github.com/pmadruga/simplate">here</a>.</p>
-
-    </div>
-  </div>
-</div>
-
-
-<div class="col-sm-6 col-md-6">
-  <div class="thumbnail">
-    <a href="../../../assets/images/godialog.png" target="_blank">
-    <img src="../../../assets/images/godialog.png">
-      </a>
-
-    <div class="caption">
-      <h3 class="media-heading">Godialog platform
-        <p>
-          <small>Webdevelopment</small>
-      </h3>
-      </p>
-      <p> A CompetenceHouse's private product, with a renewed frontend and design. The platform helps acessing and
-        reaching employees and employers goals.</p>
-
-    </div>
-  </div>
-</div>
+    <div class="col-sm-6 col-md-6"></div>
 
 </div>
-
-<div class="row">
-
-<div class="col-sm-6 col-md-6">
-  <div class="thumbnail">
-    <a href="../../../assets/images/cphize.png" target="_blank">
-    <img src="../../../assets/images/cphize.png">
-      </a>
-
-    <div class="caption">
-      <h3 class="media-heading">Copenhagenize Design Co.
-        <p>
-          <small>Webdevelopment / web design</small>
-      </h3>
-      </p>
-      <p> A wordpress website, with a simplistic and minimalistic UI, currently offline.</p>
-
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="col-sm-6 col-md-6"></div>
-
-
-<!-- Placeholder for the modal -->
-<script type="text/ng-template" id="showModal">
-    <div class="modal-header">
-        <h3 class="modal-title">I'm a modal!</h3>
-    </div>
-    <div class="modal-body">
-        <ul>
-            <li ng-repeat="item in items">
-                <a ng-click="selected.item = item">{{ item }}</a>
-            </li>
-        </ul>
-        Selected: <b>{{ selected.item }}</b>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-    </div>
-</script>
-<!-- /Modal -->

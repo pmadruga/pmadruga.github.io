@@ -15,7 +15,7 @@ System.config({
 System.config({
   "map": {
     "angular": "github:angular/bower-angular@1.4.3",
-    "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.1",
+    "angular-bootstrap": "github:angular-ui/bootstrap-bower@0.13.1/ui-bootstrap-tpls",
     "angular-sanitize": "github:angular/bower-angular-sanitize@1.4.3",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.15",
     "angularfire": "github:firebase/angularfire@1.1.2",

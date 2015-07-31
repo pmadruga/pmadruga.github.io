@@ -10,7 +10,7 @@ import "bootstrap";
 import "bootstrap/css/bootstrap.min.css!";
 import "../../assets/styles/main.css!";
 
-//import "angular-bootstrap";
+import "angular-bootstrap";
 import "angular-sanitize";
 
 import { BlogController } from "./views/blog/blogController";
@@ -28,6 +28,7 @@ angular
     .module("pedromadrugacom", [
         "ui.router",
         "firebase",
+        "ui.bootstrap",
         "ngSanitize"
     ])
 
@@ -49,11 +50,7 @@ angular
                 controllerAs: "BlogController"
 
             })
-            .state("portfolio", {
-                templateUrl: "./src/views/work/work.html",
-                url: "/work",
-                controllerAs: "WorkController"
-            })
+
             .state("login", {
                 templateUrl: "./src/views/login/login.html",
                 url: "/login",
@@ -65,6 +62,11 @@ angular
                 url: "/post",
                 controllerAs: "PostController"
 
+            })
+            .state("work", {
+                templateUrl: "./src/views/work/work.html",
+                url: "/work",
+                controllerAs: "WorkController"
             });
     })
 
@@ -75,7 +77,11 @@ angular
     .controller("WorkController", WorkController)
 
     // Services
-    .service("firebaseConnection", firebaseConnection);
+    .service("firebaseConnection", firebaseConnection)
+
+    .run(function(){
+        
+    });
 
 angular.element(document).ready(function () {
     angular.bootstrap(document, ["pedromadrugacom"]);
