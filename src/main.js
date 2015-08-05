@@ -87,8 +87,8 @@ angular
     // Services
     .service("firebaseConnection", firebaseConnection)
 
-    .run(function(){
-        
+    .run(function () {
+
     });
 
 angular.element(document).ready(function () {

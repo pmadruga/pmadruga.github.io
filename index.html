@@ -24,15 +24,19 @@
 <!-- Dependencies and SEO -->
 <section id="dependencies">
 
+    <!-- build:production -->
     <script src="lib/system.js"></script>
     <script src="config.js"></script>
-    <!-- <script src="src/build.js"></script> -->
 
     <script>
         System.import('src/main');
     </script>
+    <!-- endbuild -->
 
-    <!-- Google Analytics: placeholder
+
+
+
+    <!-- Google Analytics: placeholder -->
     <script type="text/javascript">
       var _gaq = _gaq || [];
 
@@ -45,8 +49,17 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
+
+      // Ensures that Google analytics checks for all the views
+            $rootScope.$on("$stateChangeSuccess", function (event, toState) {
+
+                /*eslint-disable */
+                ga("send", "pageview", {"page": $location.path(), "title": toState.name});
+                /*eslint-enable */
+            });
     </script>
-    -->
+
 
     <link href='http://fonts.googleapis.com/css?family=Arimo:300italic,400italic,600italic,700italic,800italic,400,600,700,800,300'
           rel='stylesheet' type='text/css'>

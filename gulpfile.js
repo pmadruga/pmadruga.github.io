@@ -2,6 +2,7 @@ var gulp = require('gulp'),
     runSequence = require('run-sequence'),
     eslint = require('gulp-eslint'),
     rimraf = require('gulp-rimraf'),
+    htmlreplace = require('gulp-html-replace'),
     minifyHTML = require('gulp-minify-html'),
     imagemin = require('gulp-imagemin'),
     minifyCss = require('gulp-minify-css'),
@@ -11,7 +12,7 @@ var gulp = require('gulp'),
 
 gulp.task('eslint', function () {
 
-    return gulp.src(['./app/**/*.js'])
+    return gulp.src(['./src/**/*.js'])
         .pipe(eslint())
         .pipe(eslint.format());
 });
@@ -22,36 +23,49 @@ gulp.task('clean', function () {
         .pipe(rimraf());
 });
 
+gulp.task('html-replace', function () {
+
+    return gulp.src('index.html')
+        .pipe(htmlreplace({
+            production: {
+                src: [['main.js']],
+                tpl: '<script src="src/%s"></script>'
+            }
+        }))
+        .pipe(gulp.dest('./dist'))
+
+});
+
 gulp.task('minify-image', function () {
-    return gulp.src('app/images/*')
+    return gulp.src('assets/images/*')
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             use: [pngquant()]
         }))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('./dist/assets/images'));
 });
 
-gulp.task('minify-css', function() {
-    return gulp.src('app/styles/*.css')
-        .pipe(minifyCss({compatibility: 'ie8'}))
-        .pipe(gulp.dest('dist/styles'));
+gulp.task('minify-css', function () {
+    return gulp.src('assets/styles/*.css')
+        .pipe(minifyCss())
+        .pipe(gulp.dest('./dist/assets/styles'));
 });
 
 gulp.task('minify-html', function () {
 
-    return gulp.src('./app/**/*.html')
+    return gulp.src('./src/**/*.html')
         .pipe(minifyHTML())
-        .pipe(gulp.dest('./dist/'));
+        .pipe(gulp.dest('./dist/src/'));
 
 });
 
 gulp.task('build-js', shell.task([
-    'jspm bundle-sfx app/main dist/main.js'
+    'jspm bundle-sfx src/main dist/src/main.js'
 ]));
 
-gulp.task('build-production', function(){
+gulp.task('build-production', function () {
 
-    runSequence("eslint", "clean", "minify-image", "minify-css", "minify-html", "build-js");
+    runSequence("eslint", "clean", "html-replace", "minify-image", "minify-css", "minify-html", "build-js");
 
 });

@@ -18,11 +18,11 @@ class WorkController {
 
         switch(src){
 
-            case "swish": return "<img src='../../../assets/images/mobileapp1.png' class='img-responsive'>";
-            case "pmcom": return "<img src='../../../assets/images/pmcom.png' class='img-responsive'>";
-            case "simplate": return "<img src='../../../assets/images/simplate.png' class='img-responsive'>";
-            case "godialog": return "<img src='../../../assets/images/godialog.png' class='img-responsive'>";
-            case "cphize": return "<img src='../../../assets/images/cphize.png' class='img-responsive'>";
+            case "swish": return "<img src='../assets/images/mobileapp1.png' class='img-responsive'>";
+            case "pmcom": return "<img src='../assets/images/pmcom.png' class='img-responsive'>";
+            case "simplate": return "<img src='../assets/images/simplate.png' class='img-responsive'>";
+            case "godialog": return "<img src='../assets/images/godialog.png' class='img-responsive'>";
+            case "cphize": return "<img src='../assets/images/cphize.png' class='img-responsive'>";
 
         }
 

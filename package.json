@@ -7,14 +7,15 @@
     "gulp": "^3.9.0",
     "gulp-connect": "^2.2.0",
     "gulp-eslint": "^0.15.0",
+    "gulp-html-replace": "^1.5.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-minify-html": "^1.0.3",
     "gulp-rimraf": "^0.1.1",
     "gulp-shell": "^0.4.2",
-    "jspm-server": "^0.1.8",
     "imagemin-pngquant": "^4.1.2",
     "jshint-stylish": "^0.2.0",
     "jspm": "^0.15.7",
+    "jspm-server": "^0.1.8",
     "run-sequence": "^1.1.2"
   },
   "engines": {

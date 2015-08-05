@@ -1,18 +1,18 @@
 "use strict";
 
 class BlogController {
-  constructor($firebaseArray, firebaseConnection) {
-      
-      this.showSpinner = true;
-      this.posts = $firebaseArray(firebaseConnection.child("posts"));
+    constructor($firebaseArray, firebaseConnection) {
 
-      // Hides the spinner icon once all data has been loaded
-      this.posts.$loaded().then(() => {
+        this.showSpinner = true;
+        this.posts = $firebaseArray(firebaseConnection.child("posts"));
 
-          this.showSpinner = false;
+        // Hides the spinner icon once all data has been loaded
+        this.posts.$loaded().then(() => {
 
-      });
-  }
+            this.showSpinner = false;
+
+        });
+    }
 }
 
 BlogController.$inject = ["$firebaseArray", "firebaseConnection"];
