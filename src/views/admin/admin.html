@@ -1,0 +1,63 @@
+<section id="postView" ng-controller="AdminController as vm">
+
+    <!-- Post preview -->
+    <div id="postPreview" class="well highlight">
+
+        <h3>{{ content.title }}
+            <small>This is the post preview.</small>
+        </h3>
+        <p ng-bind-html="content.text"></p>
+
+    </div>
+    <!-- End of Post preview -->
+    <div class="divider"></div>
+
+    <!-- Post entry -->
+    <div class="well">
+
+        <form name="createPost" ng-submit="vm.submitContent(content)">
+
+            <!--
+                <alert ng-repeat="alert in alerts" type="{{ alert.type }}" close="closeAlert($index)">{{ alert.msg }}</alert>
+            -->
+
+
+            <div class="form-group">
+                <!-- Post date -->
+                <h4><span class="label label-default">{{ vm.postDate | date: 'fullDate' }}</span></h4>
+            </div>
+
+            <div class="form-group">
+                <!-- Post title -->
+                <input id="inputTitle"
+                       class="form-control"
+                       type="text"
+                       name="inputTitle"
+                       placeholder="Title"
+                       ng-model="content.title"
+                       required/>
+
+            </div>
+
+            <div class="form-group">
+                <!-- Post content -->
+      <textarea class="form-control"
+                rows="5"
+                placeholder="Content"
+                ng-model="content.text"
+                name="inputContent"
+                required></textarea>
+
+            </div>
+
+            <!-- Button for submitting -->
+            <button class="btn btn-primary"
+                    type="submit">Submit
+            </button>
+
+        </form>
+
+
+    </div>
+
+</section>

@@ -13,10 +13,11 @@ import "../../assets/styles/main.css!";
 import "angular-bootstrap";
 import "angular-sanitize";
 
-import { BlogController } from "./views/blog/blogController";
+import { AdminController } from "./views/admin/adminController";
 import { LoginController } from "./views/login/loginController";
 import { PostController } from "./views/post/postController";
 import { WorkController } from "./views/work/workController";
+import { BlogController } from "./views/blog/blogController";
 
 import { firebaseConnection } from "./common/services";
 
@@ -50,6 +51,12 @@ angular
                 controllerAs: "BlogController"
 
             })
+            .state("post", {
+                templateUrl: "./src/views/post/post.html",
+                url: "/post/:postId",
+                controllerAs: "PostController"
+
+            })
 
             .state("login", {
                 templateUrl: "./src/views/login/login.html",
@@ -57,10 +64,10 @@ angular
                 controllerAs: "LoginController"
 
             })
-            .state("post", {
-                templateUrl: "./src/views/post/post.html",
-                url: "/post",
-                controllerAs: "PostController"
+            .state("admin", {
+                templateUrl: "./src/views/admin/admin.html",
+                url: "/admin",
+                controllerAs: "AdminController"
 
             })
             .state("work", {
@@ -73,8 +80,9 @@ angular
     // Controllers
     .controller("BlogController", BlogController)
     .controller("LoginController", LoginController)
-    .controller("PostController", PostController)
+    .controller("AdminController", AdminController)
     .controller("WorkController", WorkController)
+    .controller("PostController", PostController)
 
     // Services
     .service("firebaseConnection", firebaseConnection)
