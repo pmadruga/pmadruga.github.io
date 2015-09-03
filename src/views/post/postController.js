@@ -1,5 +1,5 @@
 "use strict";
-class PostController{
+export default class PostController{
     constructor($firebaseObject, firebaseConnection, $stateParams){
 
         // Getting the single post from the firebase "posts" object.
@@ -10,4 +10,3 @@ class PostController{
 }
 
 PostController.$inject = ["$firebaseObject", "firebaseConnection", "$stateParams"];
-export { PostController };

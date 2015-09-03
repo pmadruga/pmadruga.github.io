@@ -1,6 +1,6 @@
 "use strict";
 
-class AdminController {
+export default class AdminController {
     constructor(firebaseConnection) {
 
         this.ref = firebaseConnection.child("posts");
@@ -44,5 +44,3 @@ class AdminController {
 }
 
 AdminController.$inject = ["firebaseConnection"];
-
-export { AdminController };

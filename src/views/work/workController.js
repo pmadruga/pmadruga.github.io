@@ -1,6 +1,6 @@
 "use strict";
 
-class WorkController {
+export default class WorkController {
     constructor($modal){
         this.modal = $modal;
 
@@ -30,4 +30,3 @@ class WorkController {
 }
 
 WorkController.$inject = ["$modal"];
-export { WorkController };

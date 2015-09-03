@@ -13,11 +13,11 @@ import "../../assets/styles/main.css!";
 import "angular-bootstrap";
 import "angular-sanitize";
 
-import { AdminController } from "./views/admin/adminController";
-import { LoginController } from "./views/login/loginController";
-import { PostController } from "./views/post/postController";
-import { WorkController } from "./views/work/workController";
-import { BlogController } from "./views/blog/blogController";
+import AdminController from "./views/admin/adminController";
+import LoginController from "./views/login/loginController";
+import PostController from "./views/post/postController";
+import WorkController from "./views/work/workController";
+import BlogController from "./views/blog/blogController";
 
 import { firebaseConnection } from "./common/services";
 

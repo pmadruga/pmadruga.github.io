@@ -1,6 +1,6 @@
 "use strict";
 
-class LoginController {
+export default class LoginController {
 
     constructor(firebaseConnection) {
         var ref = firebaseConnection;
@@ -34,5 +34,3 @@ class LoginController {
 }
 
 LoginController.$inject = ["firebaseConnection"];
-
-export { LoginController };

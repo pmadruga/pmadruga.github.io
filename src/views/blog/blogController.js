@@ -1,6 +1,6 @@
 "use strict";
 
-class BlogController {
+export default class BlogController {
     constructor($firebaseArray, firebaseConnection) {
 
         this.showSpinner = true;
@@ -16,6 +16,3 @@ class BlogController {
 }
 
 BlogController.$inject = ["$firebaseArray", "firebaseConnection"];
-
-export { BlogController };
-
