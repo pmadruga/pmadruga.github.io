@@ -28,6 +28,8 @@
     <script src="lib/system.js"></script>
     <script src="config.js"></script>
 
+    <script src="src/build.js"></script>
+
     <script>
         System.import('src/main');
     </script>
@@ -49,15 +51,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
-
-      // Ensures that Google analytics checks for all the views
-            $rootScope.$on("$stateChangeSuccess", function (event, toState) {
-
-                /*eslint-disable */
-                ga("send", "pageview", {"page": $location.path(), "title": toState.name});
-                /*eslint-enable */
-            });
     </script>
 
 

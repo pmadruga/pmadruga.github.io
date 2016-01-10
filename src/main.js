@@ -7,7 +7,7 @@ import firebase from "firebase";
 import $firebase from "angularfire";
 
 import "bootstrap";
-import "bootstrap/css/bootstrap.min.css!";
+//import "bootstrap/css/bootstrap.min.css!";
 import "../../assets/styles/main.css!";
 
 import "angular-bootstrap";
